@@ -250,8 +250,8 @@ def f_getuser(l_dbinfo,l_username):
 
 if __name__ == "__main__":
     """敏感数据检测目标，需配置库和用户，使用‘%’全库扫描"""
-    v_dbinfo=["127.0.0.1","1534","uatcedb","system","hrpR2jW2"]
-    v_users=f_getuser(v_dbinfo,'AMQUE')
+    v_dbinfo=["127.0.0.1","1534","uatdb","system","******"]
+    v_users=f_getuser(v_dbinfo,'schemaname')
     """对表或视图检测的开关(YES/NO)。  YES：检测 NO ：不检测"""
     v_table_check='YES'
     v_view_check='NO'
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     v_file_path="D:\\"
     
     """DB输出位置，需配置库和用户"""
-    v_insert_db_dbinfo=["127.0.0.1","1534","uatcedb","system","hrpR2jW2"]
+    v_insert_db_dbinfo=["127.0.0.1","1534","uatdb","system","******"]
     v_insert_db_schema="SYSTEM"
     f_create_table(v_insert_db_dbinfo,v_insert_db_schema)
   
